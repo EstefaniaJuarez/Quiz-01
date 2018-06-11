@@ -1,0 +1,27 @@
+def matVec(matrix,vector):
+  """
+  Variables matrix and vector will be multiplied using the defined function above. 
+  The Inputs are defined:
+  matrix-matrix with dimensions n x m
+  vector-vector with dimensions m x p
+  The output will be new_matrix which will be the final product of the two matrices. 
+  """
+  n = len(matrix)
+  m = len(vector)
+  p = len(vector[0])
+  new_matrix = [[0]*p for row in range(n)]
+  for i in range(n):
+    for j in range(p):
+      base_matrix = 0
+      for k in range(m):
+        base_matrix += matrix[i][k] * vector[k][j]
+      new_matrix[i][j] = base_matrix
+  return new_matrix
+
+  matrix = [[1,2,8],[3,4,9]]
+  vector = [[5],[6],[7]]
+  print(matVec(matrix,vector))
+
+
+base_matrix.append(p[i][j])
+new_matrix.append(base_matrix)
